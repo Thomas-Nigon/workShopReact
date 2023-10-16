@@ -1,8 +1,11 @@
 import "./App.css";
 import ViteCard from "./Components/viteCard";
-import Card from "./Components/Card";
+import CardTnig from "./Components/CardTnig";
+import CardFtic from "./Components/CardFtic";
+import CardPa from "./Components/CardPa";
+
 function App() {
-  const team = [
+  const thomas = [
     {
       name: "Thomas",
       pic: "https://www.stickees.com/files/cartoon/the-simpsons/2242-bart-simpson-bartman.png",
@@ -10,19 +13,27 @@ function App() {
       btnText: "Click me !!",
       state: ["count"],
     },
+  ];
+  const fred = [
     {
       name: "Fred",
       pic: "https://www.stickees.com/files/cartoon/the-simpsons/2249-homer-simpson-the-incredible-homer.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perferendis veritatis saepe sunt excepturi earum.",
-      state: ["testFred"],
+      description: "Si on le titille il s'enerve, Fred pas ch$$$ ! ",
+      btnText: " AARGHRHHGH",
     },
+  ];
+  const pa = [
     {
       name: "PA",
-      pic: "https://www.stickees.com/files/cartoon/the-simpsons/2244-bart-simpson-nirvana-nevermind.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mollitia doloremque earum esse, nobis molestias?",
-      paPics: ["salut", "coucou", "ola"],
+      pidddc:
+        "https://www.stickees.com/files/cartoon/the-simpsons/2244-bart-simpson-nirvana-nevermind.png",
+      description: "On n'a PA su lequel choisir!",
+      paPics: [
+        "https://www.stickees.com/files/cartoon/the-simpsons/2240-bart-simpson-skate.png",
+        "https://www.stickees.com/files/cartoon/the-simpsons/2241-bart-simpson-scare.png",
+        "https://www.stickees.com/files/cartoon/the-simpsons/2244-bart-simpson-nirvana-nevermind.png",
+      ],
+      btnText: "Je change en cliquant",
     },
   ];
 
@@ -30,15 +41,32 @@ function App() {
     <>
       <ViteCard />
       <main className="cardContainer">
-        {team.map((element) => (
-          <Card
+        {thomas.map((element) => (
+          <CardTnig
             key={element.name}
             name={element.name}
             pic={element.pic}
             description={element.description}
             btnText={element.btnText}
-            state={element.state}
+          />
+        ))}
+        {pa.map((element) => (
+          <CardPa
+            key={element.name}
+            name={element.name}
+            pic={element.pic}
+            description={element.description}
+            btnText={element.btnText}
             paPics={element.paPics}
+          />
+        ))}
+        {fred.map((element) => (
+          <CardFtic
+            key={element.name}
+            name={element.name}
+            pic={element.pic}
+            description={element.description}
+            btnText={element.btnText}
           />
         ))}
       </main>

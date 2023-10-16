@@ -17,6 +17,7 @@ $borderColor: black;
   flex-wrap: wrap;
   background-color: $primaryColor;
   width: 100vw;
+  margin-top: 40px;
 }
 .card {
   border-radius: 15px;
@@ -37,4 +38,17 @@ $borderColor: black;
 }
 #Fred {
   background-color: $FredColor;
+}
+#titleFred {
+  font-size: 3em;
+}
+.isActive {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+.notActive {
+  transform: scale3d(1, 1, 1);
+}
+p {
+  padding-left: 10px;
+  font-size: 1.4rem;
 }

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./Card.scss";
 
-function Card({ name, pic, description, btnText, state, paPics }) {
+function Card({ name, pic, description, btnText }) {
   const [click, setState] = useState(0);
-  console.log("state:", state);
   return (
     <>
       <div className="card" id={name}>
