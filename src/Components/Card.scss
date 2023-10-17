@@ -48,6 +48,9 @@ $borderColor: black;
 .notActive {
   transform: scale3d(1, 1, 1);
 }
+.hidden {
+  display: none;
+}
 p {
   padding-left: 10px;
   font-size: 1.4rem;

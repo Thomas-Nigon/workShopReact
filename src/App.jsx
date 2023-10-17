@@ -39,6 +39,10 @@ function App() {
 
   return (
     <>
+      <img
+        src="https://www.onlygfx.com/broken-glass-tattoo-png-transparent-svg-vector/"
+        alt=""
+      />
       <ViteCard />
       <main className="cardContainer">
         {thomas.map((element) => (
